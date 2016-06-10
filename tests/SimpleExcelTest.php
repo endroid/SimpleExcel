@@ -9,6 +9,7 @@
 
 namespace Endroid\SimpleExcel\SimpleExcelTest;
 
+use Box\Spout\Reader\XLSX\Sheet;
 use Endroid\SimpleExcel\SimpleExcel;
 use PHPUnit_Framework_TestCase;
 
@@ -19,16 +20,18 @@ class SimpleExcelTest extends PHPUnit_Framework_TestCase
      */
     public function testLoadAndSave()
     {
+        $filename = __DIR__.'/data/data.xlsx';
+
         $excel = new SimpleExcel();
-        $excel->loadFromFile(__DIR__.'/data/data.xlsx');
-        $excel->loadFromArray(array(
+        $excel->getAdapter('array')->load(array(
             'Sheet A' => array(
                 array('col1' => 'a', 'col2' => 'b', 'col3' => 'c'),
                 array('col1' => 'b', 'col2' => 'c', 'col3' => 'd'),
             ),
         ));
+        $excel->getAdapter('file')->load($filename);
 
-        $data = $excel->saveToArray();
+        $data = $excel->getAdapter('array')->save();
 
         $this->assertTrue(count($data) == 3);
         $this->assertTrue(count($data['Sheet A']) == 2);
