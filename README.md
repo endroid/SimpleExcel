@@ -6,6 +6,7 @@ Simple Excel
 [![Latest Stable Version](http://img.shields.io/packagist/v/endroid/simple-excel.svg)](https://packagist.org/packages/endroid/simple-excel)
 [![Build Status](http://img.shields.io/travis/endroid/SimpleExcel.svg)](http://travis-ci.org/endroid/SimpleExcel)
 [![Total Downloads](http://img.shields.io/packagist/dt/endroid/simple-excel.svg)](https://packagist.org/packages/endroid/simple-excel)
+[![Monthly Downloads](http://img.shields.io/packagist/dm/endroid/simple-excel.svg)](https://packagist.org/packages/endroid/simple-excel)
 [![License](http://img.shields.io/packagist/l/endroid/simple-excel.svg)](https://packagist.org/packages/endroid/simple-excel)
 
 Library for quickly loading and generating Excel files. Data can be loaded
@@ -46,9 +47,9 @@ Response object instead of directly outputting to the browser.
 
 ## Versioning
 
-Version numbers follow the MAJOR.MINOR.PATCH scheme. Backwards compatible
-changes will be kept to a minimum but be aware that these can occur. Lock
-your dependencies for production and test your code when upgrading.
+Version numbers follow the MAJOR.MINOR.PATCH scheme. Backwards compatibility
+breaking changes will be kept to a minimum but be aware that these can occur.
+Lock your dependencies for production and test your code when upgrading.
 
 ## License
 
